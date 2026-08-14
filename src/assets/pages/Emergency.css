@@ -1,0 +1,878 @@
+/* ==================================================
+   GOOGLE FONTS
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sofia&family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Tajawal", sans-serif;
+}
+
+
+/* ==================================================
+   PAGE
+================================================== */
+
+.emergency-page {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    direction: rtl;
+
+    color: #f5efe6;
+
+    background-image:
+        linear-gradient(
+            rgba(45, 29, 18, 0.28),
+            rgba(45, 29, 18, 0.38)
+        ),
+        url("https://i.pinimg.com/1200x/14/54/e3/1454e37277906a4b179ed22ade164373.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
+}
+
+
+
+/* ==================================================
+   MAIN
+================================================== */
+
+.emergency-content {
+    width: calc(100% - 40px);
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding-top: 145px;
+    padding-bottom: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+
+    flex: 1;
+}
+
+
+/* ==================================================
+   PAGE TITLE
+================================================== */
+
+.emergency-heading {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    padding: 20px;
+}
+
+.emergency-number {
+    display: block;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 0.25em;
+
+    color: #ffecb2;
+
+    margin-bottom: 12px;
+}
+
+.emergency-heading p {
+    margin-bottom: 10px;
+
+    font-family: "Sofia", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 0.25em;
+
+    color: rgba(255, 236, 178, 0.75);
+}
+
+.emergency-heading h1 {
+    margin: 0;
+
+    font-family: "Reem Kufi", sans-serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    color: #fff7e8;
+}
+
+.emergency-heading span:last-child {
+    display: block;
+
+    margin-top: 12px;
+
+    font-family: "Tajawal", sans-serif;
+
+    font-size: 14px;
+
+    color: rgba(255, 247, 232, 0.8);
+}
+
+
+/* ==================================================
+   GLASS CARDS
+================================================== */
+
+.odor-card { 
+    width: 100%; 
+
+    position: relative; 
+
+    /* تصغير بسيط جدًا للكارد */
+    padding: 20px 30px; 
+
+    border-radius: 18px; 
+
+    /* الزجاج بلون قريب من #4d0013 */
+    background: rgba(77, 0, 19, 0.45); 
+
+    backdrop-filter: blur(14px); 
+    -webkit-backdrop-filter: blur(14px); 
+
+    /* الحدود الزجاجية */
+    border: 1px solid rgba(255, 255, 255, 0.22); 
+
+    /* الظلال */
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.18), 
+        inset 0 1px 1px rgba(255, 255, 255, 0.18); 
+
+    cursor: pointer; 
+
+    overflow: hidden; 
+
+    transition: 
+        transform 0.25s ease, 
+        box-shadow 0.25s ease, 
+        background 0.25s ease, 
+        border-color 0.25s ease; 
+
+    /* مسافة بين الكروت */
+    margin-bottom: 16px;
+}
+
+
+/* ==================================================
+   GLASS HIGHLIGHT
+================================================== */
+
+.odor-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   CARD HOVER
+================================================== */
+
+.odor-card:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.17);
+
+    border-color: rgba(255, 255, 255, 0.4);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25),
+        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+
+/* ==================================================
+   ODOR NAME
+================================================== */
+
+.odor-name {
+    position: relative;
+
+    z-index: 2;
+
+    font-family: "Reem Kufi", sans-serif;
+
+    font-weight: 500;
+
+    font-size: 1.5rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 0.7rem;
+
+    color: #fff8eb;
+}
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.odor-description {
+    position: relative;
+
+    z-index: 2;
+
+    font-family: "Tajawal", sans-serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 0.8rem;
+
+    color: #eee3d6;
+}
+
+
+/* ==================================================
+   RATING
+================================================== */
+
+.rating {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 18px;
+
+    gap: 10px;
+}
+
+
+/* ==================================================
+   RATING CIRCLE
+================================================== */
+
+.circle {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+
+    font-weight: 600;
+
+    color: #fff8eb;
+
+    transition:
+        all 0.2s ease;
+}
+
+.circle:hover {
+    background: rgba(255, 255, 255, 0.22);
+
+    transform: scale(1.08);
+
+    border-color: rgba(255, 255, 255, 0.95);
+}
+
+
+.circle.selected {
+    background: #ffecb2;
+
+    color: #4d0013;
+
+    border-color: #ffecb2;
+
+    transform: scale(1.1);
+
+    box-shadow:
+        0 5px 15px rgba(255, 236, 178, 0.25);
+}
+
+
+/* ==================================================
+   RESULT
+================================================== */
+
+.result {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 15px;
+
+    padding: 0.7rem 1.2rem;
+
+    min-height: 20px;
+
+    border-radius: 10px;
+
+    font-family: "Tajawal", sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    font-weight: 500;
+
+    color: #fff8eb;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        inset 0 1px rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+    width: 100%;
+
+    flex-shrink: 0;
+
+    margin-top: auto;
+
+    background: #4d0013;
+
+    color: #ffecb2;
+
+    padding: 70px 40px 25px;
+}
+
+
+.footer-inner {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 60px;
+
+    direction: ltr;
+}
+
+
+/* ==================================================
+   FOOTER BRAND
+================================================== */
+
+.footer-brand {
+    text-align: left;
+}
+
+.footer-brand h2 {
+    margin: 0 0 12px;
+
+    font-family: "Sofia", sans-serif;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    color: #ffecb2;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    font-family: "Reem Kufi", sans-serif;
+
+    font-size: 14px;
+
+    color: rgba(255, 236, 178, 0.75);
+}
+
+
+/* ==================================================
+   FOOTER COLUMNS
+================================================== */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+}
+
+.footer-column h3 {
+    margin: 0 0 10px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+    color: #ffffff;
+}
+
+.footer-column a {
+    color: rgba(255, 236, 178, 0.75);
+
+    text-decoration: none;
+
+    font-family: "Reem Kufi", sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* ==================================================
+   FOOTER LINE
+================================================== */
+
+.footer-line {
+    width: 100%;
+
+    max-width: 1200px;
+
+    height: 1px;
+
+    margin: 55px auto 22px;
+
+    background: rgba(255, 236, 178, 0.2);
+}
+
+
+/* ==================================================
+   FOOTER BOTTOM
+================================================== */
+
+.footer-bottom {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    direction: ltr;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+
+    color: rgba(255, 236, 178, 0.55);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .emergency-content {
+        width: calc(100% - 50px);
+
+        padding-top: 135px;
+    }
+
+    .odor-card {
+        padding: 23px 28px;
+    }
+
+    .odor-name {
+        font-size: 1.35rem;
+    }
+
+    .odor-description {
+        font-size: 1rem;
+    }
+
+    .footer-inner {
+        grid-template-columns:
+            1.3fr
+            1fr
+            1fr
+            1fr;
+
+        gap: 35px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE HEADER
+================================================== */
+
+
+    /* MAIN */
+
+    .emergency-content {
+        width: calc(100% - 30px);
+
+        padding-top: 115px;
+
+        padding-bottom: 70px;
+
+        gap: 15px;
+    }
+
+
+    /* TITLE */
+
+    .emergency-heading {
+        margin-bottom: 15px;
+
+        padding: 15px 5px;
+    }
+
+    .emergency-heading h1 {
+        font-size: 30px;
+    }
+
+    .emergency-heading span:last-child {
+        font-size: 12px;
+    }
+
+
+    /* CARDS */
+
+    .odor-card {
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    .odor-name {
+        font-size: 1.2rem;
+
+        line-height: 1.8;
+    }
+
+    .odor-description {
+        font-size: 0.9rem;
+
+        line-height: 1.9;
+    }
+
+
+    /* RATING */
+
+    .circle {
+        width: 36px;
+        height: 36px;
+
+        font-size: 0.9rem;
+    }
+
+
+    /* RESULT */
+
+    .result {
+        font-size: 0.85rem;
+
+        padding: 0.6rem 0.8rem;
+
+        line-height: 1.8;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 55px 25px 22px;
+    }
+
+    .footer-inner {
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 40px 25px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .emergency-content {
+        width: calc(100% - 20px);
+
+        padding-top: 105px;
+
+        padding-bottom: 50px;
+
+        gap: 12px;
+    }
+
+
+
+    /* TITLE */
+
+    .emergency-heading {
+        padding: 10px 3px;
+
+        margin-bottom: 8px;
+    }
+
+    .emergency-number {
+        font-size: 9px;
+    }
+
+    .emergency-heading p {
+        font-size: 8px;
+    }
+
+    .emergency-heading h1 {
+        font-size: 25px;
+    }
+
+    .emergency-heading span:last-child {
+        font-size: 11px;
+    }
+
+
+    /* CARDS */
+
+    .odor-card {
+        padding: 17px 15px;
+
+        border-radius: 14px;
+    }
+
+    .odor-name {
+        font-size: 1rem;
+
+        line-height: 1.8;
+    }
+
+    .odor-description {
+        font-size: 0.82rem;
+
+        line-height: 1.9;
+    }
+
+
+    /* RATING */
+
+    .rating {
+        gap: 5px;
+
+        margin-top: 15px;
+    }
+
+    .circle {
+        width: 32px;
+        height: 32px;
+
+        font-size: 0.8rem;
+    }
+
+
+    /* RESULT */
+
+    .result {
+        font-size: 0.78rem;
+
+        padding: 0.55rem 0.7rem;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 50px 25px 22px;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand h2 {
+        font-size: 36px;
+    }
+
+    .footer-brand p {
+        font-size: 12px;
+    }
+
+    .footer-column {
+        gap: 8px;
+    }
+
+    .footer-column h3 {
+        margin-bottom: 7px;
+    }
+}
+
+
+/* ==================================================
+   VERY SMALL MOBILE
+================================================== */
+
+@media (max-width: 360px) {
+
+    .emergency-content {
+        width: calc(100% - 16px);
+    }
+
+    .odor-card {
+        padding: 15px 12px;
+    }
+
+    .odor-name {
+        font-size: 0.95rem;
+    }
+
+    .odor-description {
+        font-size: 0.78rem;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+
+        font-size: 0.75rem;
+    }
+}
+
+
+/* ==================================================
+   LARGE DESKTOP
+================================================== */
+
+@media (min-width: 1400px) {
+
+    .emergency-content {
+        width: calc(100% - 120px);
+
+        max-width: 1600px;
+
+        padding-top: 155px;
+    }
+
+    .odor-card {
+        padding: 28px 45px;
+    }
+
+    .odor-name {
+        font-size: 1.6rem;
+    }
+
+    .odor-description {
+        font-size: 1.1rem;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+    }
+}

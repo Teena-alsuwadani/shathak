@@ -1,0 +1,757 @@
+/* ==================================================
+   GOOGLE FONTS
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sofia&family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+
+/* ==================================================
+   PAGE
+================================================== */
+
+.menu-page {
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  direction: rtl;
+
+  color: #f5efe6;
+
+  font-family: "Tajawal", sans-serif;
+
+  position: relative;
+
+  overflow-x: hidden;
+
+  background:
+    linear-gradient(
+      rgba(35, 22, 17, 0.18),
+      rgba(35, 22, 17, 0.35)
+    ),
+    url("https://i.pinimg.com/736x/32/88/3c/32883c56b965de2a256a6d4b2306f352.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+}
+
+/* ==================================================
+   MAIN
+================================================== */
+
+.menu-main {
+
+  flex: 1;
+
+  min-height: 780px;
+
+  padding:
+    145px 25px
+    100px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.menu-heading {
+
+  text-align: center;
+
+  margin-bottom: 45px;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,0.25);
+}
+
+
+.menu-number {
+
+  display: block;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.25em;
+
+  color: #ffecb2;
+
+  margin-bottom: 10px;
+}
+
+
+.menu-heading p {
+
+  margin-bottom: 8px;
+
+  font-family: "Sofia", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.25em;
+
+  color: rgba(255, 236, 178, 0.8);
+}
+
+
+.menu-heading h1 {
+
+  font-family: "Sofia", sans-serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  color: #fff4d5;
+
+  margin: 0;
+}
+
+
+.menu-heading > span:last-child {
+
+  display: block;
+
+  margin-top: 12px;
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 14px;
+
+  color: rgba(255,255,255,0.82);
+}
+
+
+/* ==================================================
+   CARDS CONTAINER
+================================================== */
+
+.cards-container {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 35px;
+
+  width: 100%;
+
+  max-width: 850px;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.menu-card {
+
+  width: 245px;
+
+  height: 330px;
+
+  border-radius: 22px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  background-image:
+    url("https://i.pinimg.com/736x/21/69/ab/2169ab7195d38c376ba1fe3b2e69755c.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.25);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.menu-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,0.35);
+
+  border-color:
+    rgba(255,240,221,0.8);
+}
+
+
+/* ==================================================
+   CARD OVERLAY
+================================================== */
+
+.card-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(30,20,15,0.15),
+      rgba(30,20,15,0.58)
+    );
+
+  backdrop-filter: blur(2px);
+}
+
+
+/* ==================================================
+   CARD DETAILS
+================================================== */
+
+.card-details {
+
+  position: relative;
+
+  z-index: 2;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 25px;
+
+  color: white;
+}
+
+
+.card-number {
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.2em;
+
+  color: #ffecb2;
+
+  margin-bottom: 15px;
+}
+
+
+.text-title {
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+
+  color: #fff7e5;
+
+  margin-bottom: 10px;
+}
+
+
+.text-body {
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  color: rgba(255, 244, 229, 0.85);
+
+  margin: 0;
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.card-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 72%;
+
+  height: 43px;
+
+  border-radius: 25px;
+
+  background:
+    rgba(77, 0, 19, 0.88);
+
+  border:
+    1px solid rgba(255,236,178,0.35);
+
+  color: #ffecb2;
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 12px;
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 18px;
+
+  transform: translateX(-50%);
+
+  text-decoration: none;
+
+  z-index: 3;
+
+  transition:
+    0.3s ease;
+}
+
+
+.card-button:hover {
+
+  background: #ffecb2;
+
+  color: #4d0013;
+
+  border-color: #ffecb2;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.menu-page .site-footer {
+
+  width: 100%;
+
+  background: #4d0013;
+
+  color: #ffecb2;
+
+  flex-shrink: 0;
+
+  margin-top: auto;
+
+  padding: 65px 40px 25px;
+
+  box-sizing: border-box;
+}
+
+
+.footer-inner {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 60px;
+
+  direction: ltr;
+}
+
+
+.footer-brand {
+
+  text-align: left;
+}
+
+
+.footer-brand h2 {
+
+  margin: 0 0 12px;
+
+  font-family: "Sofia", sans-serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  color: #ffecb2;
+}
+
+
+.footer-brand p {
+
+  margin: 0;
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 14px;
+
+  color: rgba(255,236,178,0.75);
+}
+
+
+/* ==================================================
+   FOOTER COLUMNS
+================================================== */
+
+.footer-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+
+.footer-column h3 {
+
+  margin: 0 0 10px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.18em;
+
+  color: #ffffff;
+}
+
+
+.footer-column a {
+
+  color: rgba(255,236,178,0.75);
+
+  text-decoration: none;
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 13px;
+
+  transition: 0.25s ease;
+}
+
+
+.footer-column a:hover {
+
+  color: #ffffff;
+
+  transform: translateX(3px);
+}
+
+
+/* ==================================================
+   FOOTER LINE
+================================================== */
+
+.footer-line {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  height: 1px;
+
+  margin: 55px auto 22px;
+
+  background:
+    rgba(255,236,178,0.2);
+}
+
+
+/* ==================================================
+   FOOTER BOTTOM
+================================================== */
+
+.footer-bottom {
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  direction: ltr;
+}
+
+
+.footer-bottom p {
+
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  color: rgba(255,236,178,0.55);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .menu-page .main-nav {
+
+    gap: 20px;
+  }
+
+
+  .menu-page .main-nav a {
+
+    font-size: 11px;
+  }
+
+
+  .cards-container {
+
+    gap: 20px;
+  }
+
+
+  .menu-card {
+
+    width: 210px;
+
+    height: 300px;
+  }
+
+
+  .footer-inner {
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 40px 30px;
+  }
+
+
+  .footer-brand {
+
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .menu-page .main-header {
+
+    top: 12px;
+
+    width: 92%;
+
+    height: 62px;
+
+    padding: 0 17px;
+  }
+
+
+  .menu-page .main-nav {
+
+    display: none;
+  }
+
+
+  .menu-page .brand-name {
+
+    font-size: 17px;
+  }
+
+
+  .menu-page .logo {
+
+    width: 36px;
+
+    height: 36px;
+  }
+
+
+  .menu-page .login-link {
+
+    font-size: 10px;
+
+    padding: 7px 12px;
+  }
+
+
+  .menu-main {
+
+    min-height: auto;
+
+    padding:
+      125px 18px
+      80px;
+  }
+
+
+  .menu-heading {
+
+    margin-bottom: 35px;
+  }
+
+
+  .menu-heading h1 {
+
+    font-size: 32px;
+  }
+
+
+  .menu-heading > span:last-child {
+
+    font-size: 12px;
+  }
+
+
+  .cards-container {
+
+    flex-direction: column;
+
+    gap: 22px;
+  }
+
+
+  .menu-card {
+
+    width: min(82vw, 300px);
+
+    height: 330px;
+  }
+
+
+  .menu-page .site-footer {
+
+    padding:
+      50px 25px
+      22px;
+  }
+
+
+  .footer-inner {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  .footer-brand {
+
+    grid-column: auto;
+  }
+
+
+  .footer-bottom {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 380px) {
+
+  .menu-card {
+
+    width: 85vw;
+
+    height: 300px;
+  }
+
+
+  .text-title {
+
+    font-size: 19px;
+  }
+
+
+  .menu-heading h1 {
+
+    font-size: 29px;
+  }
+
+}

@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Sofia&display=swap');
+
+
+/* ==================================================
+   AUTH PAGE
+================================================== */
+
+.auth-page {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+
+  background: #f3eee4;
+
+  color: #2f2927;
+}
+
+
+/* ==================================================
+   IMAGE SIDE
+================================================== */
+
+.auth-image {
+  position: relative;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #4d0013;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  position: absolute;
+
+  inset: 0;
+}
+
+.auth-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(77, 0, 19, 0.55),
+      rgba(25, 15, 14, 0.2)
+    );
+}
+
+
+/* ==================================================
+   BRAND
+================================================== */
+
+.auth-brand {
+  position: absolute;
+
+  left: 55px;
+  bottom: 55px;
+
+  color: #ffecb2;
+
+  z-index: 2;
+}
+
+.auth-brand span {
+  display: block;
+
+  font-family: "Sofia", sans-serif;
+
+  font-size: 70px;
+
+  line-height: 1;
+}
+
+.auth-brand small {
+  display: block;
+
+  margin-top: 12px;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  opacity: 0.85;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.auth-card {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 45px 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f3eee4;
+}
+
+
+/* ==================================================
+   BACK
+================================================== */
+
+.auth-back {
+  position: absolute;
+
+  top: 35px;
+  left: 45px;
+
+  color: #6d1f2b;
+
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  transition: opacity 0.2s ease;
+}
+
+.auth-back:hover {
+  opacity: 0.6;
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.auth-content {
+  width: 100%;
+
+  max-width: 430px;
+}
+
+.auth-kicker {
+  margin-bottom: 13px;
+
+  color: #6d1f2b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+}
+
+.auth-content h1 {
+  margin: 0;
+
+  color: #4d0013;
+
+  font-family: "Sofia", sans-serif;
+
+  font-size: 58px;
+
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+.auth-description {
+  margin: 12px 0 38px;
+
+  color: #756d69;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+}
+
+
+/* ==================================================
+   FORM
+================================================== */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4d0013;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d2c7ba;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  color: #2f2927;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  transition:
+    border 0.2s ease,
+    background 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: #a39a92;
+}
+
+.input-group input:focus {
+  border-color: #6d1f2b;
+
+  background: #ffffff;
+}
+
+
+/* ==================================================
+   PASSWORD
+================================================== */
+
+.password-label {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.password-label label {
+  margin-bottom: 8px;
+}
+
+.show-password {
+  padding: 0;
+
+  border: none;
+
+  background: none;
+
+  color: #6d1f2b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.show-password:hover {
+  background: none;
+
+  color: #4d0013;
+
+  transform: none;
+}
+
+
+/* ==================================================
+   OPTIONS
+================================================== */
+
+.form-options {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin: 5px 0 25px;
+}
+
+.remember {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #756d69;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.remember input,
+.terms input {
+  accent-color: #6d1f2b;
+
+  cursor: pointer;
+}
+
+.forgot-password {
+  padding: 0;
+
+  border: none;
+
+  background: none;
+
+  color: #6d1f2b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  background: none;
+
+  color: #4d0013;
+
+  transform: none;
+}
+
+
+/* ==================================================
+   TERMS
+================================================== */
+
+.terms {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin: 5px 0 24px;
+
+  color: #756d69;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  cursor: pointer;
+}
+
+
+/* ==================================================
+   SUBMIT
+================================================== */
+
+.auth-submit {
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0;
+
+  border: 1px solid #6d1f2b;
+
+  background: #6d1f2b;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.auth-submit:hover {
+  background: #4d0013;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   DIVIDER
+================================================== */
+
+.auth-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 28px 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+
+  height: 1px;
+
+  flex: 1;
+
+  background: #d8cec2;
+}
+
+.auth-divider span {
+  color: #9a918a;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+}
+
+
+/* ==================================================
+   SWITCH
+================================================== */
+
+.auth-switch {
+  text-align: center;
+
+  color: #756d69;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+}
+
+.auth-switch a {
+  margin-left: 5px;
+
+  color: #6d1f2b;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 800px) {
+
+  .auth-page {
+    display: block;
+  }
+
+  .auth-image {
+    min-height: 260px;
+
+    height: 32vh;
+  }
+
+  .auth-brand {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .auth-brand span {
+    font-size: 48px;
+  }
+
+  .auth-brand small {
+    font-size: 8px;
+
+    letter-spacing: 0.16em;
+  }
+
+  .auth-card {
+    min-height: 68vh;
+
+    padding: 75px 25px 40px;
+
+    display: block;
+  }
+
+  .auth-back {
+    top: 25px;
+    left: 25px;
+  }
+
+  .auth-content {
+    max-width: 100%;
+  }
+
+  .auth-content h1 {
+    font-size: 48px;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+  .auth-image {
+    min-height: 220px;
+  }
+
+  .auth-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .auth-content h1 {
+    font-size: 42px;
+  }
+
+}

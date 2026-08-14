@@ -1,0 +1,1113 @@
+/* ==================================================
+   GOOGLE FONTS
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sofia&family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+
+/* ==================================================
+   PAGE
+================================================== */
+
+.library-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  direction: rtl;
+
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(255, 255, 255, 0.75),
+      transparent 42%
+    ),
+    linear-gradient(
+      to bottom,
+      #f7f1e8 0%,
+      #f3ede5 50%,
+      #eee5da 100%
+    );
+
+  color: #4d0013;
+
+  overflow-x: hidden;
+}
+
+
+/* ==================================================
+   FONTS
+================================================== */
+
+/* العربي */
+.library-page,
+.library-page h1,
+.library-page h2,
+.library-page h3,
+.library-page p,
+.library-page span,
+.library-page button,
+.library-page input,
+.library-page a {
+  font-family: "Tajawal", sans-serif;
+}
+
+/* الإنجليزي */
+.library-heading p,
+.footer-brand h2,
+.footer-column h3,
+.footer-bottom p {
+  font-family: "Sofia", sans-serif;
+}
+
+
+/* ==================================================
+   LIBRARY CONTENT
+================================================== */
+
+.library-content {
+  flex: 1;
+
+  width: 100%;
+
+  padding-top: 145px;
+  padding-bottom: 100px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.7),
+      transparent 45%
+    );
+
+  position: relative;
+}
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.library-heading {
+  text-align: center;
+
+  margin-bottom: 65px;
+}
+
+.library-heading .library-number {
+  display: block;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.25em;
+
+  color: #6d1f2b;
+
+  margin-bottom: 12px;
+}
+
+.library-heading p {
+  margin: 0 0 10px;
+
+  font-family: "Sofia", sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 0.25em;
+
+  color: #8a776b;
+}
+
+.library-heading h1 {
+  margin: 0;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 38px;
+
+  font-weight: 500;
+
+  color: #4d0013;
+}
+
+.library-heading span:last-child {
+  display: block;
+
+  margin-top: 12px;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 14px;
+
+  color: #74665d;
+}
+
+
+/* ==================================================
+   LIBRARY AREA
+================================================== */
+
+.library-container {
+  position: relative;
+
+  width: 92%;
+
+  max-width: 1250px;
+
+  min-height: 500px;
+
+  margin: 35px auto 0;
+
+  padding: 45px 30px 80px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.18),
+      transparent 12%,
+      transparent 88%,
+      rgba(255,255,255,0.18)
+    );
+
+  border-left: 10px solid #c19a70;
+
+  border-right: 10px solid #c19a70;
+
+  box-shadow:
+    inset 8px 0 12px rgba(120, 80, 40, 0.08),
+    inset -8px 0 12px rgba(120, 80, 40, 0.08);
+}
+
+
+/* ==================================================
+   SHELF
+================================================== */
+
+.shelf {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(120px, 1fr));
+
+  column-gap: 25px;
+
+  row-gap: 80px;
+
+  align-items: end;
+
+  padding-bottom: 30px;
+}
+
+
+/* ==================================================
+   WOODEN SHELF
+================================================== */
+
+.shelf::after {
+  content: "";
+
+  position: absolute;
+
+  left: -20px;
+  right: -20px;
+
+  bottom: 0;
+
+  height: 16px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d5b78f 0%,
+      #bd986e 45%,
+      #9e7753 100%
+    );
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 5px 8px rgba(70, 45, 25, 0.20),
+    inset 0 1px rgba(255,255,255,0.35);
+
+  z-index: 1;
+}
+
+
+/* ==================================================
+   PERFUME
+================================================== */
+
+.perfume {
+  position: relative;
+
+  height: 160px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: flex-end;
+
+  cursor: pointer;
+
+  z-index: 3;
+
+  transition: transform 0.3s ease;
+}
+
+.perfume:hover {
+  transform: translateY(-8px);
+}
+
+
+/* ==================================================
+   PERFUME SHADOW
+================================================== */
+
+.perfume::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 6px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 75%;
+
+  height: 7px;
+
+  background: rgba(0, 0, 0, 0.17);
+
+  border-radius: 50%;
+
+  filter: blur(4px);
+
+  z-index: -1;
+}
+
+
+/* ==================================================
+   PERFUME CAP
+================================================== */
+
+.cap {
+  position: absolute;
+
+  top: 5px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 34px;
+
+  height: 17px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #e6d7c5,
+      #c7ad90
+    );
+
+  border-radius:
+    5px 5px 3px 3px;
+
+  border:
+    1px solid rgba(100, 70, 45, 0.12);
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.12);
+
+  z-index: 4;
+}
+
+
+/* ==================================================
+   PERFUME NECK
+================================================== */
+
+.neck {
+  position: absolute;
+
+  top: 20px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 13px;
+
+  height: 18px;
+
+  background:
+    linear-gradient(
+      to right,
+      #ddd0c0,
+      #f2e9dc,
+      #ddd0c0
+    );
+
+  border-radius: 2px;
+
+  border-left:
+    1px solid rgba(0,0,0,0.08);
+
+  border-right:
+    1px solid rgba(0,0,0,0.08);
+
+  z-index: 4;
+}
+
+
+/* ==================================================
+   PERFUME BODY
+================================================== */
+
+.perfume-body {
+  position: absolute;
+
+  bottom: 10px;
+
+  width: 125px;
+
+  height: 108px;
+
+  border-radius: 15px;
+
+  border:
+    1px solid rgba(180, 150, 120, 0.4);
+
+  box-shadow:
+    0 8px 17px rgba(0,0,0,0.15),
+    inset 0 1px 1px rgba(255,255,255,0.5);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 10px;
+
+  color: #6d5440;
+
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   PERFUME SHINE
+================================================== */
+
+.perfume-body::before {
+  content: "";
+
+  position: absolute;
+
+  top: 8px;
+  left: 10px;
+
+  width: 18px;
+  height: 65px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.45),
+      rgba(255,255,255,0)
+    );
+
+  border-radius: 50%;
+
+  transform: rotate(8deg);
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   PERFUME TEXT
+================================================== */
+
+.perfume-title {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 100px;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  margin-bottom: 4px;
+}
+
+.perfume-desc {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 100px;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 10px;
+
+  line-height: 1.5;
+
+  opacity: 0.82;
+}
+
+.perfume-date {
+  position: relative;
+
+  z-index: 2;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  opacity: 0.65;
+
+  margin-top: 5px;
+}
+
+
+/* ==================================================
+   DELETE BUTTON
+================================================== */
+
+.delete {
+  position: absolute;
+
+  top: 6px;
+  right: 6px;
+
+  width: 21px;
+  height: 21px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(77, 0, 19, 0.30);
+
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  z-index: 10;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delete:hover {
+  background: #4d0013;
+
+  transform: scale(1.1);
+}
+
+
+/* ==================================================
+   ADD PERFUME
+================================================== */
+
+.add-perfume {
+  cursor: pointer;
+}
+
+.add-perfume .perfume-body {
+  background:
+    rgba(255,255,255,0.28);
+
+  border:
+    1px dashed #a9825d;
+
+  color: #8a6a4d;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 42px;
+
+  font-weight: 300;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.add-perfume:hover .perfume-body {
+  background: #ffecb2;
+
+  border-color: #8a6a4d;
+
+  color: #4d0013;
+
+  box-shadow:
+    0 10px 22px rgba(77,0,19,0.14);
+}
+
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.library-modal {
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    rgba(30,20,15,0.48);
+
+  backdrop-filter: blur(6px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 999;
+}
+
+
+/* ==================================================
+   MODAL CONTENT
+================================================== */
+
+.library-modal-content {
+  position: relative;
+
+  width: min(90%, 430px);
+
+  padding: 35px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #fffaf3,
+      #f5ede2
+    );
+
+  border:
+    1px solid #d2b48c;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.22);
+
+  direction: rtl;
+}
+
+.library-modal-content h2 {
+  margin-bottom: 5px;
+
+  color: #4d0013;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.library-modal-content p {
+  margin-bottom: 25px;
+
+  color: #806b5b;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* ==================================================
+   INPUTS
+================================================== */
+
+.library-modal-content input {
+  display: block;
+
+  width: 100%;
+
+  height: 44px;
+
+  padding: 10px 14px;
+
+  margin-bottom: 12px;
+
+  border:
+    1px solid #d2b48c;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fffaf3;
+
+  color: #4d0013;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 12px;
+
+  direction: rtl;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.library-modal-content input::placeholder {
+  color: #9a897b;
+}
+
+.library-modal-content input:focus {
+  border-color: #4d0013;
+
+  box-shadow:
+    0 0 0 3px rgba(77,0,19,0.07);
+}
+
+
+/* ==================================================
+   FEELINGS TITLE
+================================================== */
+
+.library-modal-content h3 {
+  margin:
+    18px 0 12px;
+
+  color: #6d5440;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   FEELINGS
+================================================== */
+
+.feelings {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 10px;
+
+  width: 100%;
+}
+
+.feelings button {
+  min-height: 42px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 8px 10px;
+
+  cursor: pointer;
+
+  color: #5c4739;
+
+  font-family: "Tajawal", sans-serif;
+
+  font-size: 11px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.feelings button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.12);
+}
+
+.feelings button:active {
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   CLOSE MODAL
+================================================== */
+
+.close-modal {
+  position: absolute;
+
+  top: 12px;
+  right: 15px;
+
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #4d0013;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.close-modal:hover {
+  transform: rotate(90deg);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+  .library-container {
+    width: 94%;
+  }
+
+  .shelf {
+    grid-template-columns:
+      repeat(4, minmax(110px, 1fr));
+
+    column-gap: 18px;
+
+    row-gap: 75px;
+  }
+
+  .perfume-body {
+    width: 115px;
+  }
+}
+
+
+/* ==================================================
+   SMALL TABLET
+================================================== */
+
+@media (max-width: 850px) {
+
+  .shelf {
+    grid-template-columns:
+      repeat(3, minmax(110px, 1fr));
+
+    column-gap: 15px;
+
+    row-gap: 70px;
+  }
+
+  .library-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  /* CONTENT */
+
+  .library-content {
+    padding-top: 115px;
+
+    padding-bottom: 70px;
+  }
+
+  .library-heading {
+    margin-bottom: 45px;
+  }
+
+  .library-heading h1 {
+    font-size: 30px;
+  }
+
+  .library-heading span:last-child {
+    font-size: 12px;
+  }
+
+
+  /* SHELF */
+
+  .library-container {
+    width: 94%;
+
+    margin-top: 25px;
+
+    padding:
+      30px 8px 60px;
+
+    border-left-width: 6px;
+    border-right-width: 6px;
+  }
+
+  .shelf {
+    grid-template-columns:
+      repeat(2, minmax(110px, 1fr));
+
+    column-gap: 5px;
+
+    row-gap: 60px;
+  }
+
+
+  /* PERFUME */
+
+  .perfume {
+    height: 145px;
+  }
+
+  .perfume-body {
+    width: 100px;
+
+    height: 92px;
+
+    border-radius: 13px;
+  }
+
+  .cap {
+    width: 29px;
+
+    height: 14px;
+  }
+
+  .neck {
+    width: 11px;
+
+    height: 15px;
+
+    top: 18px;
+  }
+
+  .perfume-title {
+    font-size: 12px;
+
+    max-width: 82px;
+  }
+
+  .perfume-desc {
+    font-size: 9px;
+
+    max-width: 82px;
+  }
+
+  .perfume-date {
+    font-size: 8px;
+  }
+
+  .delete {
+    width: 19px;
+
+    height: 19px;
+
+    font-size: 12px;
+  }
+
+  .add-perfume .perfume-body {
+    font-size: 34px;
+  }
+
+
+  /* MODAL */
+
+  .library-modal-content {
+    width: 94%;
+
+    padding:
+      30px 20px;
+  }
+
+
+  /* FOOTER */
+
+  .site-footer {
+    padding: 55px 25px 22px;
+  }
+
+  .footer-inner {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 40px 25px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+}
+
+
+/* ==================================================
+   VERY SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+  .footer-inner {
+    grid-template-columns:
+      1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .site-footer {
+    padding:
+      50px 25px 22px;
+  }
+
+  .shelf {
+    grid-template-columns:
+      repeat(2, minmax(95px, 1fr));
+
+    column-gap: 2px;
+
+    row-gap: 50px;
+  }
+
+  .perfume {
+    height: 135px;
+  }
+
+  .perfume-body {
+    width: 90px;
+
+    height: 85px;
+  }
+
+  .library-container {
+    padding-left: 5px;
+
+    padding-right: 5px;
+  }
+}
+
+
+/* ==================================================
+   LARGE DESKTOP
+================================================== */
+
+@media (min-width: 1400px) {
+
+  .library-container {
+    max-width: 1350px;
+  }
+
+  .shelf {
+    grid-template-columns:
+      repeat(6, minmax(130px, 1fr));
+
+    column-gap: 30px;
+
+    row-gap: 85px;
+  }
+
+  .perfume {
+    height: 170px;
+  }
+
+  .perfume-body {
+    width: 135px;
+
+    height: 115px;
+  }
+}

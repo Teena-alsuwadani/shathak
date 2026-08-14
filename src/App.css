@@ -1,0 +1,1267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sofia&family=Tajawal:wght@300;400;500;600;700&display=swap');
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background: #f3eee4;
+  color: #2f2927;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+/* ==================================================
+   COLORS
+================================================== */
+
+:root {
+  --burgundy: #4d0013;
+  --burgundy-light: #6d1f2b;
+  --cream: #f3eee4;
+  --yellow: #ffecb2;
+  --text: #302a28;
+  --soft: #ebe4d9;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero-section {
+  /*
+    مساحة علوية للهيدر
+    + مساحة بسيطة تحت الصورة
+  */
+  margin: 100px 20px 20px;
+
+  /*
+    يخلي الـ Hero يدخل بالكامل داخل الشاشة
+    بدل ما ينزل لتحت
+  */
+  height: calc(100vh - 120px);
+
+  /*
+    لا نخليه يفرض 600px مثل السابق
+  */
+  min-height: 500px;
+
+  position: relative;
+
+  border: 3px solid var(--burgundy);
+
+  overflow: hidden;
+
+  background: #241c1b;
+}
+
+
+.hero-frame {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   HERO IMAGE
+================================================== */
+
+.hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    يخلي منتصف الصورة هو الجزء الظاهر
+  */
+  object-position: center center;
+
+  z-index: 0;
+
+  transform: scale(1.01);
+}
+
+
+/* ==================================================
+   HERO OVERLAY
+================================================== */
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20, 10, 12, 0.48) 0%,
+      rgba(20, 10, 12, 0.12) 35%,
+      rgba(20, 10, 12, 0.16) 65%,
+      rgba(20, 10, 12, 0.42) 100%
+    );
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   HERO TITLE
+================================================== */
+
+.hero-title {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 3;
+
+  text-align: center;
+
+  color: var(--yellow);
+
+  pointer-events: none;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.hero-title-small {
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.45em;
+
+  margin-left: 0.45em;
+
+  margin-bottom: 8px;
+}
+
+
+.hero-title h1 {
+  font-family: "Sofia", cursive;
+
+  font-size: clamp(70px, 9vw, 135px);
+
+  font-weight: 400;
+
+  line-height: 0.9;
+
+  white-space: nowrap;
+
+  letter-spacing: 0.02em;
+
+  color: var(--yellow);
+
+  text-shadow:
+    2px 3px 8px rgba(0, 0, 0, 0.28);
+}
+
+
+.hero-title-line {
+  margin-top: 18px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid rgba(255, 236, 178, 0.65);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+
+  margin-left: 0.28em;
+}
+
+
+/* ==================================================
+   SCROLL BUTTON
+================================================== */
+
+.scroll-down {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 35px;
+
+  transform: translateX(-50%);
+
+  width: 95px;
+  height: 95px;
+
+  border: none;
+
+  padding: 0;
+
+  margin: 0;
+
+  background: var(--burgundy-light);
+
+  color: var(--yellow);
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  display: grid;
+
+  place-content: center;
+
+  z-index: 5;
+
+  transition:
+    background 300ms ease,
+    transform 200ms ease;
+}
+
+
+.scroll-button-text {
+  position: absolute;
+
+  inset: 0;
+
+  margin: 0;
+
+  animation: text-rotation 9s linear infinite;
+}
+
+
+.scroll-button-text span {
+  position: absolute;
+
+  inset: 7px;
+
+  transform:
+    rotate(calc(25deg * var(--index)));
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-align: center;
+}
+
+
+.scroll-button-circle {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  background: #fffaf0;
+
+  color: var(--burgundy-light);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin: auto;
+}
+
+
+.scroll-button-icon {
+  width: 16px;
+
+  position: relative;
+
+  transition:
+    transform 0.3s ease-in-out;
+}
+
+
+.scroll-button-icon-copy {
+  position: absolute;
+
+  transform: translate(-150%, 150%);
+}
+
+
+.scroll-down:hover {
+  background: var(--burgundy);
+
+  transform:
+    translateX(-50%)
+    scale(1.05);
+}
+
+
+.scroll-down:hover .scroll-button-icon:first-child {
+  transform:
+    translate(150%, -150%);
+}
+
+
+.scroll-down:hover .scroll-button-icon-copy {
+  transition:
+    transform 0.3s ease-in-out 0.1s;
+
+  transform: translate(0);
+}
+
+
+@keyframes text-rotation {
+  to {
+    rotate: 360deg;
+  }
+}
+
+
+/* ==================================================
+   SECOND SECTION
+================================================== */
+
+.second-section {
+  background: var(--cream);
+
+  padding: 100px 20px;
+
+  text-align: center;
+}
+
+
+.container {
+  width: 88%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 50px 0;
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro-section {
+  margin-bottom: 80px;
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-bottom: 45px;
+
+  direction: rtl;
+}
+
+
+.section-number {
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 0.15em;
+
+  color: var(--burgundy-light);
+
+  opacity: 0.7;
+}
+
+
+.section-kicker {
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.15em;
+
+  color: #7b6d65;
+
+  margin-bottom: 5px;
+}
+
+
+.second-section h1 {
+  font-family: "Reem Kufi", sans-serif;
+
+  font-weight: 400;
+
+  font-size: 38px;
+
+  color: var(--burgundy-light);
+
+  margin: 0;
+}
+
+
+.intro-content {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 10px 35px;
+}
+
+
+.vertical-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  right: 0;
+
+  width: 2px;
+
+  background: var(--burgundy-light);
+
+  opacity: 0.25;
+}
+
+
+/* ==================================================
+   ARABIC TEXT
+================================================== */
+
+pre {
+  direction: rtl;
+
+  text-align: center;
+
+  unicode-bidi: isolate;
+
+  line-height: 2;
+
+  white-space: pre-line;
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 17px;
+
+  color: var(--text);
+}
+
+
+/* ==================================================
+   GALLERY
+================================================== */
+
+.gallery {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 35px;
+
+  margin-bottom: 75px;
+
+  flex-wrap: wrap;
+}
+
+
+.gallery-card {
+  padding: 7px;
+
+  background: #fffdf8;
+
+  box-shadow:
+    0 10px 30px rgba(50, 35, 30, 0.12);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.gallery-card:first-child {
+  transform: rotate(-2deg);
+}
+
+
+.gallery-card:last-child {
+  transform: rotate(2deg);
+}
+
+
+.gallery-card:hover {
+  transform:
+    rotate(0deg)
+    translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(50, 35, 30, 0.17);
+}
+
+
+.gallery img {
+  display: block;
+
+  width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+}
+
+
+/* ==================================================
+   STORY
+================================================== */
+
+.story {
+  margin-bottom: 75px;
+}
+
+
+.chapter {
+  background: var(--soft);
+
+  margin: 28px 0;
+
+  padding: 35px 45px;
+
+  border-right: 5px solid var(--burgundy-light);
+
+  text-align: right;
+
+  box-shadow:
+    0 6px 20px rgba(50, 35, 30, 0.05);
+}
+
+
+.chapter-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 15px;
+
+  direction: rtl;
+
+  margin-bottom: 18px;
+}
+
+
+.chapter-header span {
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 0.12em;
+
+  color: var(--burgundy-light);
+
+  opacity: 0.7;
+}
+
+
+.chapter h3 {
+  color: var(--burgundy-light);
+
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 1.3rem;
+
+  font-weight: 400;
+
+  margin: 0;
+}
+
+
+/* ==================================================
+   ABOUT
+================================================== */
+
+.about {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+
+.about-label {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+
+.about-label span {
+  font-size: 11px;
+
+  color: var(--burgundy-light);
+}
+
+
+.about-label p {
+  font-family: "Reem Kufi", sans-serif;
+
+  color: var(--burgundy-light);
+}
+
+
+.about > p {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  font-size: 1.1rem;
+
+  font-weight: 400;
+
+  padding: 0 10px;
+
+  white-space: pre-line;
+
+  line-height: 2;
+}
+
+
+/* ==================================================
+   START BUTTON
+================================================== */
+
+.start-wrapper {
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: 25px;
+}
+
+
+.start-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  border-radius: 18px;
+
+  gap: 15px;
+
+  padding: 13px 30px;
+
+  background-color: var(--burgundy-light);
+
+  color: #ffffff;
+
+  border: 1px solid var(--burgundy-light);
+
+  cursor: pointer;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.start-button span {
+  font-size: 18px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.start-button:hover {
+  background-color: transparent;
+
+  color: var(--burgundy-light);
+
+  transform: translateY(-2px);
+}
+
+
+.start-button:hover span {
+  transform: translateX(-4px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+  .main-nav {
+    gap: 25px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .chapter {
+    padding: 28px 30px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+
+    /*
+      مساحة للهيدر على الجوال
+    */
+    margin: 85px 12px 12px;
+
+    /*
+      نخلي الصورة تدخل ضمن الشاشة
+    */
+    height: calc(100svh - 97px);
+
+    /*
+      مهم جداً:
+      لا نخلي min-height يجبر الصورة تنزل
+    */
+    min-height: 480px;
+
+    border-width: 2px;
+  }
+
+
+  .hero-image {
+    object-position: center center;
+  }
+
+
+  /* TITLE */
+
+  .hero-title {
+    top: 50%;
+  }
+
+
+  .hero-title-small {
+    font-size: 10px;
+
+    letter-spacing: 0.35em;
+  }
+
+
+  .hero-title h1 {
+    font-size: clamp(55px, 16vw, 85px);
+  }
+
+
+  .hero-title-line {
+    font-size: 7px;
+
+    margin-top: 14px;
+
+    padding-top: 9px;
+
+    letter-spacing: 0.2em;
+  }
+
+
+  /* SCROLL */
+
+  .scroll-down {
+    width: 85px;
+    height: 85px;
+
+    bottom: 25px;
+  }
+
+
+  .scroll-button-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .scroll-button-icon {
+    width: 15px;
+  }
+
+
+  .scroll-button-text span {
+    font-size: 7px;
+  }
+
+
+  /* SECOND SECTION */
+
+  .second-section {
+    padding: 70px 15px;
+  }
+
+
+  .container {
+    width: 94%;
+
+    padding: 30px 0;
+  }
+
+
+  .section-heading {
+    gap: 12px;
+
+    margin-bottom: 30px;
+  }
+
+
+  .second-section h1 {
+    font-size: 26px;
+  }
+
+
+  .section-kicker {
+    font-size: 9px;
+  }
+
+
+  pre {
+    font-size: 14px;
+
+    line-height: 2;
+  }
+
+
+  .intro-content {
+    padding: 10px 20px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery {
+    flex-direction: column;
+
+    gap: 25px;
+
+    margin-bottom: 55px;
+  }
+
+
+  .gallery img {
+    width: 210px;
+    height: 210px;
+  }
+
+
+  /* STORY */
+
+  .chapter {
+    padding: 22px 18px;
+
+    border-right-width: 3px;
+  }
+
+
+  .chapter-header {
+    gap: 10px;
+  }
+
+
+  .chapter h3 {
+    font-size: 1rem;
+  }
+
+
+  /* ABOUT */
+
+  .about > p {
+    font-size: 0.95rem;
+  }
+
+
+  /* START */
+
+  .start-button {
+    padding: 11px 25px;
+  }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 400px) {
+
+  .hero-section {
+    margin-top: 82px;
+
+    height: calc(100svh - 94px);
+
+    min-height: 450px;
+  }
+
+
+  .hero-title h1 {
+    font-size: 52px;
+  }
+
+
+  .scroll-down {
+    width: 78px;
+    height: 78px;
+
+    bottom: 20px;
+  }
+
+
+  .scroll-button-circle {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+/* ==================================================
+   LARGE SCREENS
+================================================== */
+
+@media (min-width: 1600px) {
+
+  .hero-section {
+
+    /*
+      نفس الفكرة على الشاشات الكبيرة
+    */
+    margin: 100px 25px 20px;
+
+    height: calc(100vh - 120px);
+
+    min-height: 550px;
+  }
+
+
+  .container {
+    max-width: 1500px;
+  }
+
+
+  pre {
+    font-size: 19px;
+
+    line-height: 2.05;
+  }
+
+
+  .gallery img {
+    width: 240px;
+    height: 240px;
+  }
+
+
+  .about > p {
+    max-width: 1100px;
+
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+  background: #4d0013;
+
+  color: #ffecb2;
+
+  padding: 75px 7% 25px;
+
+  direction: ltr;
+}
+
+
+/* ==================================================
+   محتوى الفوتر
+================================================== */
+
+.footer-inner {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* ==================================================
+   اسم المشروع
+================================================== */
+
+.footer-brand h2 {
+  font-family: "Sofia", sans-serif;
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  color: #ffecb2;
+
+  margin-bottom: 10px;
+}
+
+
+.footer-brand p {
+  font-family: "Reem Kufi", sans-serif;
+
+  font-size: 13px;
+
+  color: rgba(255, 236, 178, 0.75);
+
+  margin: 0;
+}
+
+
+/* ==================================================
+   أعمدة الفوتر
+================================================== */
+
+.footer-column {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+
+.footer-column h3 {
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  margin-bottom: 10px;
+}
+
+
+.footer-column a {
+  color: rgba(255, 236, 178, 0.75);
+
+  text-decoration: none;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.footer-column a:hover {
+  color: #ffffff;
+
+  transform: translateX(4px);
+}
+
+
+/* ==================================================
+   الخط
+================================================== */
+
+.footer-line {
+  max-width: 1400px;
+
+  height: 1px;
+
+  margin: 60px auto 22px;
+
+  background: rgba(255, 236, 178, 0.25);
+}
+
+
+/* ==================================================
+   الحقوق
+================================================== */
+
+.footer-bottom {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+.footer-bottom p {
+  margin: 0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  color: rgba(255, 236, 178, 0.55);
+
+  letter-spacing: 0.03em;
+}
+
+
+/* ==================================================
+   FOOTER - MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .site-footer {
+    padding: 55px 25px 22px;
+  }
+
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px 25px;
+  }
+
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+
+  .footer-brand h2 {
+    font-size: 36px;
+  }
+
+
+  .footer-column h3 {
+    font-size: 12px;
+  }
+
+
+  .footer-column a {
+    font-size: 12px;
+  }
+
+
+  .footer-line {
+    margin-top: 45px;
+  }
+
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 7px;
+  }
+}
+
+
+/* ==================================================
+   FOOTER - LARGE SCREENS
+================================================== */
+
+@media (min-width: 1200px) {
+
+  .site-footer {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+
+  .footer-inner {
+    gap: 100px;
+  }
+}
