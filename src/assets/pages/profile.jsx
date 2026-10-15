@@ -15,7 +15,7 @@ function Profile() {
           <div className="cover-overlay"></div>
 
           <div className="profile-avatar">
-            <span>ت</span>
+            <span>N</span>
           </div>
         </div>
 
@@ -23,12 +23,12 @@ function Profile() {
         <div className="profile-info">
 
           <div className="profile-name">
-            <h1>تينا</h1>
+            <h1>NAME</h1>
             <span className="verified">✦</span>
           </div>
 
           <p className="profile-email">
-            teena@example.com
+            Name@example.com
           </p>
 
           <p className="profile-bio">
