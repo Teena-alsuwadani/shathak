@@ -18,7 +18,7 @@ function Register() {
     <main className="auth-page">
 
       <div className="auth-image">
-        <img src="/bg.jpg" alt="Shathak" />
+        <img src="/shathak/register.jpg" alt="Shathak" />
         <div className="auth-image-overlay"></div>
 
         <div className="auth-brand">

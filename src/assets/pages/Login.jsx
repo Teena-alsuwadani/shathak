@@ -18,7 +18,7 @@ function Login() {
     <main className="auth-page">
 
       <div className="auth-image">
-        <img src="/bg.jpg" alt="Shathak" />
+        <img src="/shathak/login.jpg" alt="Shathak" />
         <div className="auth-image-overlay"></div>
 
         <div className="auth-brand">

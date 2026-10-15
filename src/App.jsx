@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 import Login from "./assets/pages/Login";
 import Register from "./assets/pages/Register";
@@ -16,218 +17,221 @@ function App() {
   };
 
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
 
-      {/* ================= الصفحة الرئيسية ================= */}
+      <Routes>
 
-      <Route
-        path="/"
-        element={
-          <main>
+        {/* ================= الصفحة الرئيسية ================= */}
 
-            {/* ================= السكشن الأول ================= */}
+        <Route
+          path="/"
+          element={
+            <main>
 
-            <section className="hero-section">
+              {/* ================= السكشن الأول ================= */}
 
-              <div className="hero-frame">
+              <section className="hero-section">
 
-                <img
-                  src="/shathak/bg.jpg"
-                  alt="Shathak"
-                  className="hero-image"
-                />
+                <div className="hero-frame">
 
-                <div className="hero-overlay"></div>
+                  <img
+                    src="/shathak/bg.jpg"
+                    alt="Shathak"
+                    className="hero-image"
+                  />
+
+                  <div className="hero-overlay"></div>
 
 
-                {/* ================= الهيدر ================= */}
+                  {/* ================= الهيدر ================= */}
 
-                <header className="main-header">
+                  <header className="main-header">
 
-                  <Link
-                    to="/profile"
-                    className="brand"
+                    <Link
+                      to="/profile"
+                      className="brand"
+                    >
+
+                      <div className="logo">
+
+                        <div className="head"></div>
+
+                        <div className="body"></div>
+
+                      </div>
+
+                      <span className="brand-name">
+                        شذاك
+                      </span>
+
+                    </Link>
+
+
+                    <nav className="main-nav">
+
+                      <a href="#next">
+                        عن شذاك
+                      </a>
+
+                      <Link to="/library">
+                        المكتبة العطرية
+                      </Link>
+
+                      <Link to="/emergency">
+                        ركن الطوارئ
+                      </Link>
+
+                    </nav>
+
+
+                    {/* تسجيل الدخول */}
+
+                    <Link
+                      to="/login"
+                      className="login-link"
+                    >
+                      تسجيل دخول
+                    </Link>
+
+                  </header>
+
+
+                  {/* ================= العنوان ================= */}
+
+                  <div className="hero-title">
+
+                    <span className="hero-title-small">
+                      THE
+                    </span>
+
+                    <h1>
+                      Shathak
+                    </h1>
+
+                    <span className="hero-title-line">
+                      FROM SCENT TO MEMORY
+                    </span>
+
+                  </div>
+
+
+                  {/* ================= زر النزول ================= */}
+
+                  <button
+                    className="scroll-down"
+                    onClick={goDown}
+                    aria-label="الانتقال للسكشن التالي"
                   >
 
-                    <div className="logo">
+                    <p className="scroll-button-text">
 
-                      <div className="head"></div>
+                      <span style={{ "--index": 0 }}> </span>
+                      <span style={{ "--index": 1 }}>E</span>
+                      <span style={{ "--index": 2 }}>X</span>
+                      <span style={{ "--index": 3 }}>P</span>
+                      <span style={{ "--index": 4 }}>L</span>
+                      <span style={{ "--index": 5 }}>O</span>
+                      <span style={{ "--index": 6 }}>R</span>
+                      <span style={{ "--index": 7 }}>E</span>
+                      <span style={{ "--index": 8 }}> </span>
+                      <span style={{ "--index": 9 }}>S</span>
+                      <span style={{ "--index": 10 }}>H</span>
+                      <span style={{ "--index": 11 }}>A</span>
+                      <span style={{ "--index": 12 }}>T</span>
+                      <span style={{ "--index": 13 }}>H</span>
+                      <span style={{ "--index": 14 }}>A</span>
+                      <span style={{ "--index": 15 }}>K</span>
 
-                      <div className="body"></div>
+                    </p>
+
+
+                    <div className="scroll-button-circle">
+
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="scroll-button-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+
+                        <path
+                          d="M12 4V19M6 13L12 19L18 13"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+
+                      </svg>
+
+
+                      <svg
+                        viewBox="0 0 24 24"
+                        className="scroll-button-icon scroll-button-icon-copy"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+
+                        <path
+                          d="M12 4V19M6 13L12 19L18 13"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+
+                      </svg>
 
                     </div>
 
-                    <span className="brand-name">
-                      شذاك
-                    </span>
-
-                  </Link>
-
-
-                  <nav className="main-nav">
-
-                    <a href="#next">
-                      عن شذاك
-                    </a>
-
-                    <Link to="/library">
-                      المكتبة العطرية
-                    </Link>
-
-                    <Link to="/emergency">
-                      ركن الطوارئ
-                    </Link>
-
-                  </nav>
-
-
-                  {/* تسجيل الدخول */}
-
-                  <Link
-                    to="/login"
-                    className="login-link"
-                  >
-                    تسجيل دخول
-                  </Link>
-
-                </header>
-
-
-                {/* ================= العنوان ================= */}
-
-                <div className="hero-title">
-
-                  <span className="hero-title-small">
-                    THE
-                  </span>
-
-                  <h1>
-                    Shathak
-                  </h1>
-
-                  <span className="hero-title-line">
-                    FROM SCENT TO MEMORY
-                  </span>
+                  </button>
 
                 </div>
 
-
-                {/* ================= زر النزول ================= */}
-
-                <button
-                  className="scroll-down"
-                  onClick={goDown}
-                  aria-label="الانتقال للسكشن التالي"
-                >
-
-                  <p className="scroll-button-text">
-
-                    <span style={{ "--index": 0 }}> </span>
-                    <span style={{ "--index": 1 }}>E</span>
-                    <span style={{ "--index": 2 }}>X</span>
-                    <span style={{ "--index": 3 }}>P</span>
-                    <span style={{ "--index": 4 }}>L</span>
-                    <span style={{ "--index": 5 }}>O</span>
-                    <span style={{ "--index": 6 }}>R</span>
-                    <span style={{ "--index": 7 }}>E</span>
-                    <span style={{ "--index": 8 }}> </span>
-                    <span style={{ "--index": 9 }}>S</span>
-                    <span style={{ "--index": 10 }}>H</span>
-                    <span style={{ "--index": 11 }}>A</span>
-                    <span style={{ "--index": 12 }}>T</span>
-                    <span style={{ "--index": 13 }}>H</span>
-                    <span style={{ "--index": 14 }}>A</span>
-                    <span style={{ "--index": 15 }}>K</span>
-
-                  </p>
+              </section>
 
 
-                  <div className="scroll-button-circle">
+              {/* ================= السكشن الثاني ================= */}
 
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="scroll-button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+              <section
+                className="second-section"
+                id="next"
+              >
 
-                      <path
-                        d="M12 4V19M6 13L12 19L18 13"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-
-                    </svg>
+                <div className="container">
 
 
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="scroll-button-icon scroll-button-icon-copy"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                  {/* ================= المقدمة ================= */}
 
-                      <path
-                        d="M12 4V19M6 13L12 19L18 13"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+                  <section className="intro-section">
 
-                    </svg>
+                    <div className="section-heading">
 
-                  </div>
+                      <span className="section-number">
+                        01
+                      </span>
 
-                </button>
+                      <div>
 
-              </div>
+                        <p className="section-kicker">
+                          اكتشف الفكرة
+                        </p>
 
-            </section>
+                        <h1>
+                          لماذا شذاك؟
+                        </h1>
 
-
-            {/* ================= السكشن الثاني ================= */}
-
-            <section
-              className="second-section"
-              id="next"
-            >
-
-              <div className="container">
-
-
-                {/* ================= المقدمة ================= */}
-
-                <section className="intro-section">
-
-                  <div className="section-heading">
-
-                    <span className="section-number">
-                      01
-                    </span>
-
-                    <div>
-
-                      <p className="section-kicker">
-                        اكتشف الفكرة
-                      </p>
-
-                      <h1>
-                        لماذا شذاك؟
-                      </h1>
+                      </div>
 
                     </div>
 
-                  </div>
 
+                    <div className="intro-content">
 
-                  <div className="intro-content">
+                      <div className="vertical-line"></div>
 
-                    <div className="vertical-line"></div>
-
-                    <pre>
+                      <pre>
 تُعد حاسة الشم "الحاسه المنسية"
 
 رغم كونها الأقوى اتصالاً بالجهاز الحوفي
@@ -251,62 +255,62 @@ function App() {
 هدفنا هو تحويل (الشم) من مجرد إدراك حسي
 إلى سجل طبي وجداني يحمي ماضيك
 ويؤمن مستقبلك.
-                    </pre>
+                      </pre>
 
-                  </div>
+                    </div>
 
-                </section>
-
-
-                {/* ================= معرض الصور ================= */}
-
-                <section className="gallery">
-
-                  <div className="gallery-card">
-
-                    <img
-                      src={`${import.meta.env.BASE_URL}gallery-1.jpg`}
-                      alt="صورة عطرية"
-                    />
-
-                  </div>
+                  </section>
 
 
-                  <div className="gallery-card">
+                  {/* ================= معرض الصور ================= */}
 
-                    <img
-                      src={`${import.meta.env.BASE_URL}gallery-2.jpg`}
-                      alt="صورة عطرية"
-                    />
+                  <section className="gallery">
 
-                  </div>
+                    <div className="gallery-card">
 
-                </section>
-
-
-                {/* ================= القصة ================= */}
-
-                <section
-                  className="story"
-                  id="story"
-                >
-
-                  <div className="chapter">
-
-                    <div className="chapter-header">
-
-                      <span>
-                        01
-                      </span>
-
-                      <h3>
-                        القسم الاول : المكتبة العطرية
-                      </h3>
+                      <img
+                        src="/shathak/f1.jpg"
+                        alt="صورة عطرية"
+                      />
 
                     </div>
 
 
-                    <pre>
+                    <div className="gallery-card">
+
+                      <img
+                        src="/shathak/f2.jpg"
+                        alt="صورة عطرية"
+                      />
+
+                    </div>
+
+                  </section>
+
+
+                  {/* ================= القصة ================= */}
+
+                  <section
+                    className="story"
+                    id="story"
+                  >
+
+                    <div className="chapter">
+
+                      <div className="chapter-header">
+
+                        <span>
+                          01
+                        </span>
+
+                        <h3>
+                          القسم الاول : المكتبة العطرية
+                        </h3>
+
+                      </div>
+
+
+                      <pre>
 لماذا "المكتبة العطرية"؟
 
 في عالم العطور، يسعى الشغوفون لجمع
@@ -359,30 +363,30 @@ function App() {
 حيث يمكنك العودة إليها
 في أي وقت لاستعادة تلك اللحظة
 بكامل تفاصيلها الحسية.
-                    </pre>
-
-                  </div>
-
-
-                  <div
-                    className="chapter"
-                    id="emergency"
-                  >
-
-                    <div className="chapter-header">
-
-                      <span>
-                        02
-                      </span>
-
-                      <h3>
-                        القسم الثاني: ركن الطوارئ: رادار الأمان
-                      </h3>
+                      </pre>
 
                     </div>
 
 
-                    <pre>
+                    <div
+                      className="chapter"
+                      id="emergency"
+                    >
+
+                      <div className="chapter-header">
+
+                        <span>
+                          02
+                        </span>
+
+                        <h3>
+                          القسم الثاني: ركن الطوارئ: رادار الأمان
+                        </h3>
+
+                      </div>
+
+
+                      <pre>
 لماذا سمي بهذا الاسم؟
 
 لأن التغير في حاسة الشم
@@ -423,225 +427,226 @@ function App() {
 احتفظ بسجل هذه التنبيهات
 لمشاركتها مع المختص عند الحاجة
 لسرعة التشخيص.
-                    </pre>
+                      </pre>
+
+                    </div>
+
+                  </section>
+
+
+                  {/* ================= عن المشروع ================= */}
+
+                  <section className="about">
+
+                    <div className="about-label">
+
+                      <span>
+                        03
+                      </span>
+
+                      <p>
+                        عن المشروع
+                      </p>
+
+                    </div>
+
+
+                    <p>
+                      ختاماً: عن مشروعنا
+
+                      هذا العمل هو ثمرة جهد شغوفه لطالبات الصف الثالث الثانوي
+                      (مسار الصحة والحياة).
+
+                      انطلقنا من فكرة أن "الذاكرة هي أغلى ما ملك"،
+                      وأن حاسة الشم هي الحارس الوفي لهذه الذاكرة.
+
+                      مشروع "شذى الذاكرة" وتطبيقه "شذاك"
+                      ليس مجرد متطلب تخرج، بل هو رسالة علمية وإنسانية
+                      نسعى من خلالها لتوظيف التقنية في خدمة الصحة النفسية
+                      والوقاية المبكرة،
+
+                      لنضمن أن يبقى شذى ذكرياتكم حياً.. للأبد.
+                    </p>
+
+                  </section>
+
+
+                  {/* ================= زر البداية ================= */}
+
+                  <div className="start-wrapper">
+
+                    <Link to="/Menu">
+
+                      <button className="start-button">
+                        start
+                        <span>→</span>
+                      </button>
+
+                    </Link>
 
                   </div>
 
-                </section>
+                </div>
+
+              </section>
 
 
-                {/* ================= عن المشروع ================= */}
+              {/* ================= FOOTER ================= */}
 
-                <section className="about">
+              <footer className="site-footer">
 
-                  <div className="about-label">
+                <div className="footer-inner">
 
-                    <span>
-                      03
-                    </span>
+
+                  <div className="footer-brand">
+
+                    <h2>
+                      Shathak
+                    </h2>
 
                     <p>
-                      عن المشروع
+                      حيث تصبح الرائحة ذاكرة
                     </p>
 
                   </div>
 
 
+                  <div className="footer-column">
+
+                    <h3>
+                      Explore
+                    </h3>
+
+                    <a href="#next">
+                      عن شذاك
+                    </a>
+
+                    <a href="#story">
+                      المكتبة العطرية
+                    </a>
+
+                    <a href="#emergency">
+                      ركن الطوارئ
+                    </a>
+
+                  </div>
+
+
+                  <div className="footer-column">
+
+                    <h3>
+                      Contact
+                    </h3>
+
+                    <a href="mailto:your@email.com">
+                      Email
+                    </a>
+
+                    <a href="#">
+                      Instagram
+                    </a>
+
+                    <a href="#">
+                      X
+                    </a>
+
+                  </div>
+
+
+                  <div className="footer-column">
+
+                    <h3>
+                      About
+                    </h3>
+
+                    <a href="#next">
+                      Our Project
+                    </a>
+
+                    <Link to="/profile">
+                      Profile
+                    </Link>
+
+                    <Link to="/login">
+                      Login
+                    </Link>
+
+                  </div>
+
+                </div>
+
+
+                <div className="footer-line"></div>
+
+
+                <div className="footer-bottom">
+
                   <p>
-                    ختاماً: عن مشروعنا
-
-                    هذا العمل هو ثمرة جهد شغوفه لطالبات الصف الثالث الثانوي
-                    (مسار الصحة والحياة).
-
-                    انطلقنا من فكرة أن "الذاكرة هي أغلى ما ملك"،
-                    وأن حاسة الشم هي الحارس الوفي لهذه الذاكرة.
-
-                    مشروع "شذى الذاكرة" وتطبيقه "شذاك"
-                    ليس مجرد متطلب تخرج، بل هو رسالة علمية وإنسانية
-                    نسعى من خلالها لتوظيف التقنية في خدمة الصحة النفسية
-                    والوقاية المبكرة،
-
-                    لنضمن أن يبقى شذى ذكرياتكم حياً.. للأبد.
+                    ©️ 2026 Shathak. All rights reserved.
                   </p>
 
-                </section>
-
-
-                {/* ================= زر البداية ================= */}
-
-                <div className="start-wrapper">
-
-                  <Link to="/Menu">
-
-                    <button className="start-button">
-                      start
-                      <span>→</span>
-                    </button>
-
-                  </Link>
-
-                </div>
-
-              </div>
-
-            </section>
-
-
-            {/* ================= FOOTER ================= */}
-
-            <footer className="site-footer">
-
-              <div className="footer-inner">
-
-
-                <div className="footer-brand">
-
-                  <h2>
-                    Shathak
-                  </h2>
-
                   <p>
-                    حيث تصبح الرائحة ذاكرة
+                    Made with care for memories.
                   </p>
 
                 </div>
 
+              </footer>
 
-                <div className="footer-column">
-
-                  <h3>
-                    Explore
-                  </h3>
-
-                  <a href="#next">
-                    عن شذاك
-                  </a>
-
-                  <a href="#story">
-                    المكتبة العطرية
-                  </a>
-
-                  <a href="#emergency">
-                    ركن الطوارئ
-                  </a>
-
-                </div>
+            </main>
+          }
+        />
 
 
-                <div className="footer-column">
+        {/* ================= تسجيل الدخول ================= */}
 
-                  <h3>
-                    Contact
-                  </h3>
-
-                  <a href="mailto:your@email.com">
-                    Email
-                  </a>
-
-                  <a href="#">
-                    Instagram
-                  </a>
-
-                  <a href="#">
-                    X
-                  </a>
-
-                </div>
+        <Route
+          path="/login"
+          element={<Login />}
+        />
 
 
-                <div className="footer-column">
+        {/* ================= إنشاء حساب ================= */}
 
-                  <h3>
-                    About
-                  </h3>
-
-                  <a href="#next">
-                    Our Project
-                  </a>
-
-                  <Link to="/profile">
-                    Profile
-                  </Link>
-
-                  <Link to="/login">
-                    Login
-                  </Link>
-
-                </div>
-
-              </div>
+        <Route
+          path="/register"
+          element={<Register />}
+        />
 
 
-              <div className="footer-line"></div>
+        {/* ================= المكتبة العطرية ================= */}
+
+        <Route
+          path="/library"
+          element={<Library />}
+        />
 
 
-              <div className="footer-bottom">
+        {/* ================= ركن الطوارئ ================= */}
 
-                <p>
-                  ©️ 2026 Shathak. All rights reserved.
-                </p>
-
-                <p>
-                  Made with care for memories.
-                </p>
-
-              </div>
-
-            </footer>
-
-          </main>
-        }
-      />
+        <Route
+          path="/emergency"
+          element={<Emergency />}
+        />
 
 
-      {/* ================= تسجيل الدخول ================= */}
+        {/* ================= المنيو ================= */}
 
-      <Route
-        path="/login"
-        element={<Login />}
-      />
-
-
-      {/* ================= إنشاء حساب ================= */}
-
-      <Route
-        path="/register"
-        element={<Register />}
-      />
+        <Route
+          path="/Menu"
+          element={<Menu />}
+        />
 
 
-      {/* ================= المكتبة العطرية ================= */}
+        {/* ================= الصفحة الشخصية ================= */}
 
-      <Route
-        path="/library"
-        element={<Library />}
-      />
+        <Route
+          path="/profile"
+          element={<Profile />}
+        />
 
-
-      {/* ================= ركن الطوارئ ================= */}
-
-      <Route
-        path="/emergency"
-        element={<Emergency />}
-      />
-
-
-      {/* ================= المنيو ================= */}
-
-      <Route
-        path="/Menu"
-        element={<Menu />}
-      />
-
-
-      {/* ================= الصفحة الشخصية ================= */}
-
-      <Route
-        path="/profile"
-        element={<Profile />}
-      />
-
-    </Routes>
+      </Routes>
+    </>
   );
 }
 
