@@ -11,13 +11,15 @@ function Profile() {
 
       <section className="profile-hero">
 
-        <div className="profile-cover">
-          <div className="cover-overlay"></div>
 
-          <div className="profile-avatar">
-            <span>N</span>
-          </div>
-        </div>
+<div className="profile-cover">
+  <div className="cover-overlay"></div>
+</div>
+
+<div className="profile-avatar">
+  <span>N</span>
+</div>
+
 
 
         <div className="profile-info">

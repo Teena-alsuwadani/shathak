@@ -1,1255 +1,774 @@
+
 /* ==================================================
    PROFILE PAGE
 ================================================== */
 
 .profile-page {
-
   min-height: 100vh;
-
   background: #f3eee4;
-
   color: #302a28;
-
   direction: rtl;
-
   padding-top: 115px;
-
 }
-
 
 /* ==================================================
    PROFILE HERO
 ================================================== */
 
 .profile-hero {
-
   width: min(1200px, 92%);
-
   margin: 0 auto 70px;
-
   background: #fffaf0;
-
   border: 1px solid rgba(77, 0, 19, 0.12);
-
-  box-shadow:
-    0 15px 45px rgba(50, 35, 30, 0.08);
-
+  box-shadow: 0 15px 45px rgba(50, 35, 30, 0.08);
+  position: relative;
 }
-
 
 /* ==================================================
    COVER
 ================================================== */
 
 .profile-cover {
-
   height: 220px;
-
   position: relative;
-
   overflow: hidden;
-
-  background:
-    linear-gradient(
-      135deg,
-      #4d0013,
-      #6d1f2b,
-      #3b0614
-    );
+  background: linear-gradient(
+    135deg,
+    #4d0013,
+    #6d1f2b,
+    #3b0614
+  );
 }
 
-
 .profile-cover::before {
-
   content: "";
-
   position: absolute;
-
   width: 450px;
-
   height: 450px;
-
   border: 1px solid rgba(255, 236, 178, 0.2);
-
   border-radius: 50%;
-
   top: -260px;
-
   right: -80px;
 }
 
-
 .profile-cover::after {
-
   content: "";
-
   position: absolute;
-
   width: 300px;
-
   height: 300px;
-
   border: 1px solid rgba(255, 236, 178, 0.12);
-
   border-radius: 50%;
-
   bottom: -220px;
-
   left: 10%;
-
 }
-
 
 .cover-overlay {
-
   position: absolute;
-
   inset: 0;
-
-  background:
-    radial-gradient(
-      circle at center,
-      rgba(255, 236, 178, 0.12),
-      transparent 55%
-    );
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 236, 178, 0.12),
+    transparent 55%
+  );
 }
-
 
 /* ==================================================
    AVATAR
 ================================================== */
 
 .profile-avatar {
-
   position: absolute;
-
-  bottom: -48px;
-
+  top: 165px;
   right: 55px;
-
   width: 110px;
-
   height: 110px;
-
+  box-sizing: border-box;
   border-radius: 50%;
-
   background: #ffecb2;
-
   border: 6px solid #fffaf0;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   z-index: 5;
-
-  box-shadow:
-    0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-
 
 .profile-avatar span {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 42px;
-
   color: #4d0013;
-
 }
-
 
 /* ==================================================
    PROFILE INFO
 ================================================== */
 
 .profile-info {
-
-  padding: 65px 55px 45px;
-
+  padding: 75px 55px 45px;
   position: relative;
+  z-index: 1;
 }
-
 
 .profile-name {
-
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
 }
-
 
 .profile-name h1 {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 30px;
-
   font-weight: 400;
-
   color: #4d0013;
-
 }
 
-
 .verified {
-
   width: 20px;
-
   height: 20px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   border-radius: 50%;
-
   background: #6d1f2b;
-
   color: #ffecb2;
-
   font-size: 10px;
 }
 
-
 .profile-email {
-
   font-family: "Inter", sans-serif;
-
   font-size: 12px;
-
   color: #8b7b72;
-
   direction: ltr;
-
   text-align: right;
-
   margin-top: 2px;
 }
 
-
 .profile-bio {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 14px;
-
   color: #5f5550;
-
   margin-top: 16px;
-
 }
 
-
 .edit-profile {
-
   position: absolute;
-
   left: 55px;
-
   top: 70px;
-
   padding: 10px 22px;
-
   border: 1px solid #6d1f2b;
-
   border-radius: 20px;
-
   background: transparent;
-
   color: #6d1f2b;
-
   font-family: "Reem Kufi", sans-serif;
-
   cursor: pointer;
-
   transition: 0.25s ease;
 }
 
-
 .edit-profile:hover {
-
   background: #6d1f2b;
-
   color: #ffecb2;
 }
-
 
 /* ==================================================
    CONTENT
 ================================================== */
 
 .profile-content {
-
   width: min(1200px, 92%);
-
   margin: 0 auto;
-
   padding-bottom: 100px;
 }
-
 
 /* ==================================================
    STATS
 ================================================== */
 
 .profile-stats {
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   background: #fffaf0;
-
   border: 1px solid rgba(77, 0, 19, 0.1);
-
   margin-bottom: 70px;
 }
 
-
 .stat {
-
   text-align: center;
-
   padding: 25px;
-
   border-left: 1px solid rgba(77, 0, 19, 0.1);
 }
 
-
 .stat:last-child {
-
   border-left: none;
 }
 
-
 .stat strong {
-
   display: block;
-
   font-family: "Inter", sans-serif;
-
   font-size: 27px;
-
   font-weight: 400;
-
   color: #4d0013;
 }
 
-
 .stat span {
-
   display: block;
-
   margin-top: 4px;
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 12px;
-
   color: #8b7b72;
 }
-
 
 /* ==================================================
    SECTION
 ================================================== */
 
 .profile-section {
-
   margin-bottom: 80px;
 }
 
-
 .section-title {
-
   display: flex;
-
   align-items: flex-end;
-
   justify-content: space-between;
-
   margin-bottom: 30px;
 }
 
-
 .section-title > div span {
-
   display: block;
-
   font-family: "Inter", sans-serif;
-
   font-size: 9px;
-
   letter-spacing: 0.2em;
-
   color: #9a8980;
-
   direction: ltr;
-
   margin-bottom: 4px;
 }
 
-
 .section-title h2 {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 25px;
-
   font-weight: 400;
-
   color: #4d0013;
 }
-
 
 .view-all,
 .add-memory {
-
   border: none;
-
   background: transparent;
-
   color: #6d1f2b;
-
   font-family: "Reem Kufi", sans-serif;
-
   cursor: pointer;
-
   font-size: 12px;
 }
 
-
 .view-all:hover,
 .add-memory:hover {
-
   color: #4d0013;
 }
-
 
 /* ==================================================
    PERFUME GRID
 ================================================== */
 
 .perfume-grid {
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 25px;
 }
 
-
 .perfume-card {
-
   position: relative;
-
   background: #fffaf0;
-
   padding: 10px;
-
   border: 1px solid rgba(77, 0, 19, 0.1);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .perfume-card:hover {
-
   transform: translateY(-5px);
-
-  box-shadow:
-    0 15px 35px rgba(50, 35, 30, 0.1);
+  box-shadow: 0 15px 35px rgba(50, 35, 30, 0.1);
 }
-
 
 /* ==================================================
    PERFUME IMAGE
 ================================================== */
 
 .perfume-image {
-
   height: 260px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #d8b6a1,
-      #8c4c49
-    );
-
+  background: linear-gradient(145deg, #d8b6a1, #8c4c49);
   position: relative;
-
   display: flex;
-
   align-items: flex-end;
-
   justify-content: flex-start;
-
   padding: 15px;
 }
 
-
 .perfume-image-two {
-
-  background:
-    linear-gradient(
-      145deg,
-      #bca88d,
-      #5b4039
-    );
+  background: linear-gradient(145deg, #bca88d, #5b4039);
 }
-
 
 .perfume-image-three {
-
-  background:
-    linear-gradient(
-      145deg,
-      #d2c0a3,
-      #6d1f2b
-    );
+  background: linear-gradient(145deg, #d2c0a3, #6d1f2b);
 }
-
 
 .perfume-image span {
-
-  color: rgba(255, 255, 255, 0.7);
-
   font-family: "Inter", sans-serif;
-
   font-size: 10px;
-
   letter-spacing: 0.2em;
-
   direction: ltr;
 }
-
 
 /* ==================================================
    PERFUME INFO
 ================================================== */
 
 .perfume-info {
-
   padding: 15px 8px 10px;
 }
 
-
 .perfume-info h3 {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 16px;
-
   font-weight: 400;
-
   color: #4d0013;
 }
 
-
 .perfume-info p {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 11px;
-
   color: #8b7b72;
-
   margin-top: 2px;
 }
-
 
 /* ==================================================
    HEART
 ================================================== */
 
 .heart {
-
   position: absolute;
-
   top: 20px;
-
   left: 20px;
-
   width: 34px;
-
   height: 34px;
-
   border: none;
-
   border-radius: 50%;
-
   background: rgba(255, 250, 240, 0.9);
-
   color: #6d1f2b;
-
   cursor: pointer;
-
   font-size: 15px;
-
   transition: 0.2s ease;
 }
 
-
 .heart:hover {
-
   transform: scale(1.1);
 }
-
 
 /* ==================================================
    SCENT PERSONALITY
 ================================================== */
 
 .scent-personality {
-
   display: grid;
-
   grid-template-columns: 1fr 1.3fr;
-
   gap: 50px;
-
   background: #4d0013;
-
   padding: 50px;
-
   color: #ffecb2;
 }
 
-
 .personality-main {
-
   display: flex;
-
   gap: 20px;
-
   align-items: flex-start;
 }
 
-
 .personality-number {
-
   font-family: "Inter", sans-serif;
-
   font-size: 11px;
-
   opacity: 0.6;
 }
 
-
 .personality-main h3 {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 23px;
-
   font-weight: 400;
-
   margin-bottom: 12px;
 }
 
-
 .personality-main p {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 13px;
-
   line-height: 2;
-
   color: rgba(255, 236, 178, 0.7);
-
   max-width: 400px;
 }
-
 
 /* ==================================================
    SCENT BARS
 ================================================== */
 
 .scent-bars {
-
   display: flex;
-
   flex-direction: column;
-
   gap: 20px;
 }
 
-
 .scent-row {
-
   display: grid;
-
   grid-template-columns: 55px 1fr 40px;
-
   align-items: center;
-
   gap: 12px;
 }
 
-
 .scent-row span {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 11px;
 }
 
-
 .scent-row strong {
-
   font-family: "Inter", sans-serif;
-
   font-size: 10px;
-
   font-weight: 400;
-
   opacity: 0.7;
 }
 
-
 .bar {
-
   height: 2px;
-
   background: rgba(255, 236, 178, 0.18);
 }
 
-
 .bar i {
-
   display: block;
-
   height: 100%;
-
   background: #ffecb2;
 }
-
 
 /* ==================================================
    MEMORIES
 ================================================== */
 
 .memory-list {
-
   display: flex;
-
   flex-direction: column;
-
   gap: 18px;
 }
 
-
 .memory-card {
-
   display: flex;
-
   align-items: center;
-
   gap: 25px;
-
   padding: 25px;
-
   background: #fffaf0;
-
   border: 1px solid rgba(77, 0, 19, 0.1);
-
   transition: 0.25s ease;
 }
 
-
 .memory-card:hover {
-
   transform: translateX(-4px);
-
-  box-shadow:
-    0 10px 30px rgba(50, 35, 30, 0.07);
+  box-shadow: 0 10px 30px rgba(50, 35, 30, 0.07);
 }
 
-
 .memory-date {
-
   width: 65px;
-
   height: 65px;
-
   flex-shrink: 0;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   background: #4d0013;
-
   color: #ffecb2;
 }
 
-
 .memory-date strong {
-
   font-family: "Inter", sans-serif;
-
   font-size: 22px;
-
   font-weight: 400;
 }
 
-
 .memory-date span {
-
   font-family: "Inter", sans-serif;
-
   font-size: 8px;
-
   letter-spacing: 0.15em;
 }
 
-
 .memory-content {
-
   flex: 1;
 }
 
-
 .memory-perfume {
-
   font-family: "Inter", sans-serif;
-
   font-size: 9px;
-
   letter-spacing: 0.15em;
-
   color: #9a8980;
-
   direction: ltr;
 }
 
-
 .memory-content h3 {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 17px;
-
   font-weight: 400;
-
   color: #4d0013;
-
   margin: 5px 0;
 }
 
-
 .memory-content p {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 12px;
-
   color: #756a65;
 }
 
-
 .memory-arrow {
-
   width: 38px;
-
   height: 38px;
-
   border: 1px solid rgba(77, 0, 19, 0.2);
-
   border-radius: 50%;
-
   background: transparent;
-
   color: #4d0013;
-
   cursor: pointer;
 }
-
 
 /* ==================================================
    SETTINGS
 ================================================== */
 
 .settings-list {
-
   background: #fffaf0;
-
   border: 1px solid rgba(77, 0, 19, 0.1);
 }
 
-
 .setting-item {
-
   width: 100%;
-
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   padding: 22px 25px;
-
   background: transparent;
-
   border: none;
-
   border-bottom: 1px solid rgba(77, 0, 19, 0.08);
-
   cursor: pointer;
-
   text-align: right;
-
   color: #302a28;
 }
 
-
 .setting-item:last-child {
-
   border-bottom: none;
 }
 
-
 .setting-item strong {
-
   display: block;
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 14px;
-
   font-weight: 400;
-
   color: #4d0013;
 }
 
-
 .setting-item span {
-
   font-family: "Reem Kufi", sans-serif;
-
   font-size: 11px;
-
   color: #95877f;
-
   margin-top: 3px;
 }
 
-
 .setting-item > span {
-
   font-size: 18px;
-
   color: #6d1f2b;
 }
 
-
 .setting-item:hover {
-
   background: #f7f0e5;
 }
 
-
 .setting-item.logout strong {
-
   color: #8b303d;
 }
-
 
 /* ==================================================
    TABLET
 ================================================== */
 
 @media (max-width: 900px) {
-
   .profile-page {
-
     padding-top: 100px;
   }
 
   .profile-hero,
   .profile-content {
-
     width: 94%;
   }
 
   .perfume-grid {
-
     grid-template-columns: repeat(2, 1fr);
   }
 
   .scent-personality {
-
     grid-template-columns: 1fr;
-
     gap: 35px;
   }
-
 }
-
 
 /* ==================================================
    MOBILE
 ================================================== */
 
 @media (max-width: 600px) {
-
   .profile-page {
-
     padding-top: 90px;
   }
 
-
   .profile-hero {
-
     margin-bottom: 45px;
   }
 
-
   .profile-cover {
-
     height: 170px;
   }
 
-
   .profile-avatar {
-
+    top: 165px;
+    bottom: auto;
     width: 85px;
-
     height: 85px;
-
     right: 25px;
-
-    bottom: -38px;
-
     border-width: 4px;
   }
 
-
   .profile-avatar span {
-
     font-size: 32px;
   }
 
-
+  /* مساحة كافية أسفل الدائرة */
   .profile-info {
-
-    padding: 55px 25px 30px;
+    padding: 90px 25px 30px;
   }
 
-
   .profile-name h1 {
-
     font-size: 24px;
   }
 
-
   .profile-bio {
-
     font-size: 12px;
-
     max-width: 240px;
   }
 
-
   .edit-profile {
-
     position: static;
-
     margin-top: 18px;
-
     padding: 8px 18px;
   }
 
-
   .profile-stats {
-
     margin-bottom: 50px;
   }
 
-
   .stat {
-
     padding: 18px 5px;
   }
 
-
   .stat strong {
-
     font-size: 21px;
   }
 
-
   .stat span {
-
     font-size: 9px;
   }
 
-
   .section-title h2 {
-
     font-size: 21px;
   }
 
-
   .section-title > div span {
-
     font-size: 7px;
   }
 
-
   .perfume-grid {
-
     grid-template-columns: 1fr;
-
     gap: 18px;
   }
 
-
   .perfume-image {
-
     height: 300px;
   }
 
-
   .scent-personality {
-
     padding: 30px 25px;
   }
 
-
   .personality-main h3 {
-
     font-size: 20px;
   }
 
-
   .personality-main p {
-
     font-size: 12px;
   }
 
-
   .scent-row {
-
     grid-template-columns: 45px 1fr 35px;
-
     gap: 8px;
   }
 
-
   .memory-card {
-
     padding: 18px;
-
     gap: 15px;
   }
 
-
   .memory-date {
-
     width: 55px;
-
     height: 55px;
   }
 
-
   .memory-content h3 {
-
     font-size: 14px;
   }
 
-
   .memory-content p {
-
     font-size: 10px;
   }
 
-
   .memory-arrow {
-
     display: none;
   }
 
-
   .profile-section {
-
     margin-bottom: 55px;
   }
-
 }
-
 
 /* ==================================================
    SMALL MOBILE
 ================================================== */
 
 @media (max-width: 380px) {
-
   .profile-page {
-
     padding-top: 85px;
   }
 
-
   .profile-cover {
-
     height: 150px;
   }
 
-
   .profile-avatar {
-
+    top: 165px;
+    bottom: auto;
     right: 20px;
-
     width: 75px;
-
     height: 75px;
   }
 
-
   .profile-info {
-
+    padding-top: 100px;
     padding-left: 20px;
-
     padding-right: 20px;
   }
 
-
   .profile-stats {
-
     grid-template-columns: 1fr;
   }
 
-
   .stat {
-
     border-left: none;
-
     border-bottom: 1px solid rgba(77, 0, 19, 0.1);
   }
 
-
   .stat:last-child {
-
     border-bottom: none;
   }
-
 }
