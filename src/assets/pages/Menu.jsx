@@ -172,17 +172,9 @@ function Menu() {
               Contact
             </h3>
 
-            <a href="mailto:your@email.com">
-              Email
-            </a>
-
-            <a href="#">
-              Instagram
-            </a>
-
-            <a href="#">
-              X
-            </a>
+           <a href="mailto:your@email.com">Email</a>
+<a href="#">Instagram</a>
+<a href="#">X</a>
 
           </div>
 

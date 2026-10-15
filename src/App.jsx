@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 import Login from "./assets/pages/Login";
 import Register from "./assets/pages/Register";
@@ -9,7 +9,6 @@ import Menu from "./assets/pages/Menu";
 import Profile from "./assets/pages/profile";
 
 function App() {
-
   const goDown = () => {
     document.getElementById("next")?.scrollIntoView({
       behavior: "smooth",
@@ -20,43 +19,49 @@ function App() {
     <Routes>
 
       {/* ================= الصفحة الرئيسية ================= */}
+
       <Route
         path="/"
         element={
           <main>
 
-            {/* =====================================================
-                السكشن الأول
-            ===================================================== */}
+            {/* ================= السكشن الأول ================= */}
 
             <section className="hero-section">
 
               <div className="hero-frame">
 
                 <img
-                  src="/bg.jpg"
+                  src="/shathak/bg.jpg"
                   alt="Shathak"
                   className="hero-image"
                 />
 
                 <div className="hero-overlay"></div>
 
+
                 {/* ================= الهيدر ================= */}
 
                 <header className="main-header">
 
-                  <a href="/profile" className="brand">
+                  <Link
+                    to="/profile"
+                    className="brand"
+                  >
 
                     <div className="logo">
+
                       <div className="head"></div>
+
                       <div className="body"></div>
+
                     </div>
 
                     <span className="brand-name">
                       شذاك
                     </span>
 
-                  </a>
+                  </Link>
 
 
                   <nav className="main-nav">
@@ -65,25 +70,25 @@ function App() {
                       عن شذاك
                     </a>
 
-                    <a href="/library">
+                    <Link to="/library">
                       المكتبة العطرية
-                    </a>
-                    
+                    </Link>
 
-                    <a href="/Emergency">
+                    <Link to="/emergency">
                       ركن الطوارئ
-                    </a>
+                    </Link>
 
                   </nav>
 
 
                   {/* تسجيل الدخول */}
-                  <a
-                    href="/login"
+
+                  <Link
+                    to="/login"
                     className="login-link"
                   >
                     تسجيل دخول
-                  </a>
+                  </Link>
 
                 </header>
 
@@ -183,9 +188,7 @@ function App() {
             </section>
 
 
-            {/* =====================================================
-                السكشن الثاني
-            ===================================================== */}
+            {/* ================= السكشن الثاني ================= */}
 
             <section
               className="second-section"
@@ -193,6 +196,7 @@ function App() {
             >
 
               <div className="container">
+
 
                 {/* ================= المقدمة ================= */}
 
@@ -261,8 +265,8 @@ function App() {
                   <div className="gallery-card">
 
                     <img
-                      src="https://i.pinimg.com/736x/02/1c/c0/021cc04c1a2fe77292f62d7147c7a9e6.jpg"
-                      alt="صورة ثانية"
+                      src={`${import.meta.env.BASE_URL}gallery-1.jpg`}
+                      alt="صورة عطرية"
                     />
 
                   </div>
@@ -271,8 +275,8 @@ function App() {
                   <div className="gallery-card">
 
                     <img
-                      src="https://i.pinimg.com/736x/e3/bd/20/e3bd202dad16ceff4366474fa1f90aee.jpg"
-                      alt="صورة ثالثة"
+                      src={`${import.meta.env.BASE_URL}gallery-2.jpg`}
+                      alt="صورة عطرية"
                     />
 
                   </div>
@@ -467,14 +471,14 @@ function App() {
 
                 <div className="start-wrapper">
 
-                  <a href="/Menu">
+                  <Link to="/Menu">
 
                     <button className="start-button">
                       start
                       <span>→</span>
                     </button>
 
-                  </a>
+                  </Link>
 
                 </div>
 
@@ -483,13 +487,12 @@ function App() {
             </section>
 
 
-            {/* =====================================================
-                FOOTER
-            ===================================================== */}
+            {/* ================= FOOTER ================= */}
 
             <footer className="site-footer">
 
               <div className="footer-inner">
+
 
                 <div className="footer-brand">
 
@@ -556,13 +559,13 @@ function App() {
                     Our Project
                   </a>
 
-                  <a href="/profile.html">
+                  <Link to="/profile">
                     Profile
-                  </a>
+                  </Link>
 
-                  <a href="/login">
+                  <Link to="/login">
                     Login
-                  </a>
+                  </Link>
 
                 </div>
 
@@ -575,7 +578,7 @@ function App() {
               <div className="footer-bottom">
 
                 <p>
-                  © 2026 Shathak. All rights reserved.
+                  ©️ 2026 Shathak. All rights reserved.
                 </p>
 
                 <p>
@@ -606,29 +609,39 @@ function App() {
         element={<Register />}
       />
 
-      {/* ================= مكتبة لبعطور  ================= */}
+
+      {/* ================= المكتبة العطرية ================= */}
+
+      <Route
+        path="/library"
+        element={<Library />}
+      />
 
 
-      <Route path="/library" element={<Library />} />
+      {/* ================= ركن الطوارئ ================= */}
+
+      <Route
+        path="/emergency"
+        element={<Emergency />}
+      />
 
 
-      {/* ================= ركن الطوارئ  ================= */}
+      {/* ================= المنيو ================= */}
+
+      <Route
+        path="/Menu"
+        element={<Menu />}
+      />
 
 
-      <Route path="/emergency" element={<Emergency />}/>
+      {/* ================= الصفحة الشخصية ================= */}
 
-       {/* ================= المنيو  ================= */}
+      <Route
+        path="/profile"
+        element={<Profile />}
+      />
 
-
-      <Route path="/Menu" element={<Menu />}/>
-
-      {/* ================= الصفحة الشخصية  ================= */}
-
-
-      <Route path="/profile" element={<Profile />}/>
-      
     </Routes>
-
   );
 }
 
